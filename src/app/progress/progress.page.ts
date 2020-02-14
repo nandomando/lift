@@ -12,4 +12,6 @@ export class ProgressPage implements OnInit {
   ngOnInit() {
   }
 
+  onLogout() { }
+
 }
