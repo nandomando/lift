@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ExercisesService } from '../exercises.service';
+import { Exercise } from '../exercise.model';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  loadedExercises: Exercise[];
 
-  constructor() {}
+  constructor(private exercisesService: ExercisesService) { }
+
+  ngOnInit() {
+    this.loadedExercises = this.exercisesService.exercises;
+  }
 
 }
