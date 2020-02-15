@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-progress',
@@ -9,14 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ProgressPage implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  onLogout() {
-    this.authService.logout();
-    // this.router.navigateByUrl('/auth');
   }
 
 }
