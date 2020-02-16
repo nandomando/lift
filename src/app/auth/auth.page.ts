@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AuthPage implements OnInit {
 
+  isLogin = true;
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -17,6 +19,20 @@ export class AuthPage implements OnInit {
   onLogin() {
     this.authService.login();
     this.router.navigateByUrl('tabs/tab/home');
+  }
+
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
+
+    const email = form.value.mail;
+    const password = form.value.pass;
+    console.log(email, password);
+  }
+
+  changeMode() {
+    this.isLogin = !this.isLogin;
   }
 
 }
