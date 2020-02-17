@@ -12,4 +12,7 @@ export class ExercisePage implements OnInit {
   ngOnInit() {
   }
 
+  onCreateExercise() {
+    console.log('creating exercise yoo')
+  }
 }
