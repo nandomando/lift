@@ -6,6 +6,7 @@ export class Exercise {
         public sets: number,
         public reps: number,
         public weight: number,
+        public userId: string,
     ) {}
 }
 
