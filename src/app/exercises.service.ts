@@ -67,8 +67,13 @@ export class ExercisesService {
         weight,
         this.authService.userId
       );
-      this.exercises.pipe(take(1)).subscribe(exercises => {
+      this.exercises.pipe(
+        take(1)).subscribe(exercises => {
         this._exercises.next(exercises.concat(newExercise));
-      })
+      });
+    }
+
+    updateExercise() {
+
     }
 }

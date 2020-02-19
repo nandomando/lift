@@ -17,7 +17,7 @@ export class ExercisePage implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       name: new FormControl(null, { updateOn: 'blur', validators: [Validators.required]}),
-      weigth: new FormControl(null, { updateOn: 'blur', validators: [Validators.required]}),
+      weight: new FormControl(null, { updateOn: 'blur', validators: [Validators.required]}),
       sets: new FormControl(null, {updateOn: 'blur', validators: [Validators.required]}),
       reps: new FormControl(null, {updateOn: 'blur', validators: [Validators.required]})
     });
@@ -29,7 +29,7 @@ export class ExercisePage implements OnInit {
     }
     this.exercisesService.addExercise(
       this.form.value.name,
-      +this.form.value.weigth,
+      +this.form.value.weight,
       +this.form.value.sets,
       +this.form.value.reps,
      );
