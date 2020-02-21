@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'edit/:exerciseId',
     loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
-  }
+  },
 ];
 
 @NgModule({
