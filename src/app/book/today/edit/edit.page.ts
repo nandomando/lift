@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { ExercisesService } from 'src/app/exercises.service';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
@@ -53,10 +52,10 @@ export class EditPage implements OnInit {
   }
 
   update() {
-    // if (!this.form.valid) {
-    //   return;
-    // }
-    // console.log(this.form);
+    if (!this.form.valid) {
+      return;
+    }
+    console.log(this.form);
   }
 
 }
