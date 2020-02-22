@@ -16,6 +16,7 @@ export class ExercisesService {
       3,
       10,
       100,
+      new Date(),
       'abc'
       ),
       new Exercise('p2',
@@ -24,6 +25,7 @@ export class ExercisesService {
       3,
       4,
       150,
+      new Date(),
       'abc'
       ),
       new Exercise('p3',
@@ -32,6 +34,7 @@ export class ExercisesService {
       6,
       2,
       60,
+      new Date(),
       'abc'
       )
     ]
@@ -65,6 +68,7 @@ export class ExercisesService {
         sets,
         reps,
         weight,
+        new Date(),
         this.authService.userId
       );
       this.exercises.pipe(

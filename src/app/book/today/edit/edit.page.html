@@ -51,6 +51,7 @@
             expand="block"
             color="primary"
             (click)="update()"
+            [disabled]="!form.valid"
           >Update</ion-button>
         </ion-col>
       </ion-row>

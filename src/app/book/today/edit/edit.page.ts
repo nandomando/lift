@@ -41,13 +41,6 @@ export class EditPage implements OnInit {
           reps: new FormControl(this.exercise.reps, {updateOn: 'blur', validators: [Validators.required]})
         });
       });
-      // this.exerciseId = paramap.get('exerciseId');
-      // this.exerciseSub = this.exerciseService.getExercise(paramap.get('exerciseId'));
-      // this.form = new FormGroup({
-      //   weight: new FormControl(this.exercise.weight, {updateOn: 'blur', validators: [Validators.required]}),
-      //   sets: new FormControl(this.exercise.sets, {updateOn: 'blur', validators: [Validators.required]}),
-      //   reps: new FormControl(this.exercise.reps, {updateOn: 'blur', validators: [Validators.required]})
-      // });
     });
   }
 

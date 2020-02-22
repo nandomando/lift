@@ -14,7 +14,7 @@ export class AuthService {
   get userId() {
     return this._userId;
   }
-  
+
   constructor() { }
 
   login() {

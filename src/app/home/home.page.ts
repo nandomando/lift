@@ -25,5 +25,4 @@ export class HomePage implements OnInit, OnDestroy {
       this.onDestroySub.unsubscribe();
     }
   }
-
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ExercisesService } from '../exercises.service';
 import { Router } from '@angular/router';
+import { TodaysService } from '../todays.service';
 
 @Component({
   selector: 'app-exercise',
@@ -12,7 +13,7 @@ export class ExercisePage implements OnInit {
 
   form: FormGroup;
 
-  constructor(private exercisesService: ExercisesService, private router: Router) { }
+  constructor(private exercisesService: ExercisesService, private router: Router, private todayService: TodaysService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -33,6 +34,7 @@ export class ExercisePage implements OnInit {
       +this.form.value.sets,
       +this.form.value.reps,
      );
+    this.todayService.addToday(new Date());
     this.form.reset();
     this.router.navigate(['/', 'tabs', 'tab', 'book', 'today']);
   }
