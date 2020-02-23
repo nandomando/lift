@@ -9,7 +9,7 @@ const routes: Routes = [
     component: BookPage
   },
   {
-    path: 'today',
+    path: 'today/:todayId',
     loadChildren: () => import('./today/today.module').then( m => m.TodayPageModule)
   }
 ];

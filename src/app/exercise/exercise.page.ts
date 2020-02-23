@@ -34,8 +34,8 @@ export class ExercisePage implements OnInit {
       +this.form.value.sets,
       +this.form.value.reps,
      );
-    this.todayService.addToday(new Date());
+    this.todayService.addToday();
     this.form.reset();
-    this.router.navigate(['/', 'tabs', 'tab', 'book', 'today']);
+    this.router.navigate(['/', 'tabs', 'tab', 'book']);
   }
 }

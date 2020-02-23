@@ -11,6 +11,7 @@ import { take, map } from 'rxjs/operators';
 export class TodaysService {
   private _todays = new BehaviorSubject<Today[]> ([
     new Today(
+      't1',
       new Date('2020-02-20'),
       'abc'
     )
@@ -24,18 +25,19 @@ export class TodaysService {
     private exerciseService: ExercisesService,
    ) { }
 
-    getToday(date: Date) {
+    getToday(id: string) {
       return this.todays.pipe(
         take(1),
         map(todays => {
-          return {...todays.find(element => element.date === date)};
+          return {...todays.find(element => element.id === id)};
         })
       );
     }
 
-    addToday(date: Date) {
+    addToday() {
       // if (date <= ) {}
       const newDate = new Today(
+        Math.random().toString(),
         new Date(),
         this.authService.userId
       );

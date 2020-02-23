@@ -16,7 +16,7 @@ export class ExercisesService {
       3,
       10,
       100,
-      new Date(),
+      new Date('2020-02-20'),
       'abc'
       ),
       new Exercise('p2',
@@ -25,7 +25,7 @@ export class ExercisesService {
       3,
       4,
       150,
-      new Date(),
+      new Date('2020-02-20'),
       'abc'
       ),
       new Exercise('p3',
@@ -34,7 +34,7 @@ export class ExercisesService {
       6,
       2,
       60,
-      new Date(),
+      new Date('2020-02-21'),
       'abc'
       )
     ]
